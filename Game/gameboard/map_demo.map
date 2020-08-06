@@ -1,0 +1,52 @@
+[level]
+map = ..........
+      .#####.##.
+      .#...#..#.
+      .#...####.
+      .##.##....
+      ..........
+
+[TileCollecton]
+tile_image  = gameboard/ground.png
+tile_width  = 24
+tile_height = 16
+
+
+[.]
+name = floor
+tile = 0, 3
+
+[#]
+name = wall
+tile = 0, 2
+wall = true
+block = true
+
+
+[player]
+config = player_config.txt
+x = 0
+y = 0
+hp = 100
+mp = 200
+
+[Mob_1]
+config = mob_config.txt
+x = 5
+y = 0
+hp = 100
+mp = 200
+
+[Mob_2]
+config = mob_config.txt
+x = 0
+y = 4
+hp = 100
+mp = 200
+
+[ghost]
+config = ghost_config.txt
+x = 0
+y = 0
+hp = 100
+mp = 200

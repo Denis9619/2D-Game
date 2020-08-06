@@ -1,0 +1,22 @@
+[walkLeft]
+images = goblin_left_1.png
+	 goblin_left_2.png
+	 goblin_left_3.png
+	 goblin_left_4.png
+	 goblin_left_5.png
+         goblin_left_6.png
+
+[walkRight]
+images = goblin_right_1.png
+	 goblin_right_2.png
+	 goblin_right_3.png
+	 goblin_right_4.png
+	 goblin_right_5.png
+	 goblin_right_6.png
+
+[stand]
+image = stand_goblin.png
+
+[stats]
+hp = 50
+mp = 100

@@ -1,0 +1,19 @@
+[walkLeft]
+images = pygame_left_1.png
+	 pygame_left_2.png
+	 pygame_left_3.png
+	 pygame_left_4.png
+	 pygame_left_5.png
+         pygame_left_6.png
+
+[walkRight]
+images = pygame_right_1.png
+	 pygame_right_2.png
+	 pygame_right_3.png
+	 pygame_right_4.png
+	 pygame_right_5.png
+	 pygame_right_6.png
+
+[stand]
+image = pygame_idle.png
+

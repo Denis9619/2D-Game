@@ -1,0 +1,43 @@
+digraph {
+    node [shape=box]
+    player_config[shape = parallelogram]
+    mob_config[shape = parallelogram]
+    game_config[shape = parallelogram]
+    map_demo_map[shape = parallelogram]
+    
+    GameMap__init[shape = septagon]
+    unit_Unit__init[shape = septagon]
+    unit_Mob__init[shape = septagon]
+    
+    player_config -> map_demo_map[label="sprites"]
+    mob_config -> map_demo_map[label="sprites"]
+    map_demo_map -> game_config[label = "map and unit params"]
+    map_demo_map -> GameMap_from_file[label = "map_params"]
+    
+    unit_Mob_from_config_section -> GameMap__init[label ="mob params"]
+    unit_Unit_from_config_section-> GameMap__init[label ="player params"] 
+    unit_Mob_from_config_section -> unit_Mob__init[label = "x,y,hp,mp"]
+    unit_Unit_from_config_section -> unit_Unit__init[label = "x,y,hp,mp"]
+    
+    GameMap_from_file -> GameMap__init
+    GameMap__init -> unit_Unit_from_config_section[label = "hp,mp,x,y"]
+    GameMap__init -> unit_Unit_from_config_section[label = "hp,mp,x,y"]
+    GameMap__init -> unit_Unit__init[label = "map sizes"]
+    GameMap__init -> unit_Mob__init[label = "map sizes"]
+    GameMap__init -> unit_Unit_from_config_section 
+    GameMap__init -> unit_Mob_from_config_section
+
+    
+    player_config -> unit_Unit_from_file [label = "sprites"]
+    mob_config -> unit_Mob_from_file[label = "sprites"]
+    unit_Unit_from_file  ->unit_Unit__init[label = "sprites"]
+    unit_Mob_from_file -> unit_Mob__init[label = "sprites"]
+    unit_Unit__init -> stats_StatBarGroup_subscribe_on_unit[label ="hp,mp"]
+
+
+    stats_StatBarGroup_subscribe_on_unit ->Game [label = "hp/mp_bars" ]
+    GameMap__init -> Game
+    game_config -> Game [label = "screen size, map_demo_map"]
+    
+    
+}

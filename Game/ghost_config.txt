@@ -1,0 +1,22 @@
+[walkLeft]
+images = ghost_left_1.png
+	 ghost_left_2.png
+	 ghost_left_3.png
+	 ghost_left_4.png
+	 ghost_left_5.png
+         ghost_left_6.png
+
+[walkRight]
+images = ghost_right_1.png
+	 ghost_right_2.png
+	 ghost_right_3.png
+	 ghost_right_4.png
+	 ghost_right_5.png
+	 ghost_right_6.png
+
+[stand]
+image = ghost_stand.png
+
+[stats]
+hp = 50
+mp = 100

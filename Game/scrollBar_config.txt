@@ -1,0 +1,5 @@
+[forward_line]
+image = hp_red.png
+
+[back_line]
+image = hp_back.png
